@@ -12,6 +12,8 @@ from pages import predict
 # Register callbacks for predict page
 predict.register_callbacks(app)
 
+
+
 # === Custom CSS (same style as your predict-only app) ===
 app.index_string = """
 <!DOCTYPE html>
@@ -52,6 +54,11 @@ app.index_string = """
                 font-weight: 900;
             }
 
+            .nav-right {
+                display: flex;
+                gap: 15px; /* space between buttons */
+            }
+
             .predict-btn {
                 text-decoration: none;
                 background-color: #007BFF;
@@ -88,7 +95,10 @@ app.index_string = """
     <body>
         <div class="header">
             <a href="/" class="home-btn">TCO Classifier</a>
-            <a href="/predict" class="predict-btn">Classify</a>
+            <div class="nav-right">
+                <a href="/predict" class="predict-btn">Classify</a>
+                <a href="/lookup" class="predict-btn">Lookup</a>
+            </div>
         </div>
         {%app_entry%}
         <div class="footer">
