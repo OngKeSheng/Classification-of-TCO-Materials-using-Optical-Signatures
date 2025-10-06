@@ -97,7 +97,7 @@ app.index_string = """
             <a href="/" class="home-btn">TCO Classifier</a>
             <div class="nav-right">
                 <a href="/predict" class="predict-btn">Classify</a>
-                <a href="/lookup" class="predict-btn">Lookup</a>
+                <a href="/visualize" class="predict-btn">Visualize</a>
             </div>
         </div>
         {%app_entry%}
@@ -116,3 +116,4 @@ app.layout = dash.page_container
 
 if __name__ == "__main__":
     app.run(debug=True)
+
