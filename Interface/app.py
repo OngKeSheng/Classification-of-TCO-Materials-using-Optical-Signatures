@@ -25,9 +25,10 @@ app.index_string = """
         {%css%}
         <style>
             body {
-                background-color: #87CEEB; /* Sky Blue */
+                background-color: #87CEEB;
                 margin: 0;
                 font-family: Arial, sans-serif;
+                overflow-x: hidden;
             }
 
             /* Header */
@@ -56,7 +57,7 @@ app.index_string = """
 
             .nav-right {
                 display: flex;
-                gap: 15px; /* space between buttons */
+                gap: 15px;
             }
 
             .predict-btn {
@@ -68,8 +69,19 @@ app.index_string = """
                 font-size: 18px;
                 font-weight: 600;
             }
+
             .predict-btn:hover {
                 background-color: #0056b3;
+            }
+
+            /* Content area (keeps pages inside header/footer) */
+            .content {
+                margin-top: 100px;
+                margin-bottom: 80px;
+                padding: 20px;
+                min-height: calc(100vh - 180px);
+                box-sizing: border-box;
+                overflow-y: auto;
             }
 
             /* Footer */
@@ -83,12 +95,7 @@ app.index_string = """
                 text-align: center;
                 padding: 10px;
                 border-top: 2px solid #ccc;
-            }
-
-            .content {
-                margin-top: 100px;
-                margin-bottom: 80px;
-                padding: 20px;
+                z-index: 1000;
             }
         </style>
     </head>
@@ -100,10 +107,15 @@ app.index_string = """
                 <a href="/visualize" class="predict-btn">Visualize</a>
             </div>
         </div>
-        {%app_entry%}
+
+        <div class="content">
+            {%app_entry%}
+        </div>
+
         <div class="footer">
             © 2025 TCO Classifier | Built with XGBoost & Dash
         </div>
+
         {%config%}
         {%scripts%}
         {%renderer%}
@@ -116,4 +128,3 @@ app.layout = dash.page_container
 
 if __name__ == "__main__":
     app.run(debug=True)
-
