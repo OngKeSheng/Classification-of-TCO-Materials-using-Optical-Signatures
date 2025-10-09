@@ -1,0 +1,57 @@
+/* === RangeSlider Styling === */
+.custom-range-slider {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.rc-slider-rail {
+    background-color: #dcdcdc !important;
+    height: 5px !important;
+    border-radius: 5px !important;
+    width: 100% !important;
+}
+
+.rc-slider-track {
+    background-color: #ff8c00 !important;
+    height: 5px !important;
+    border-radius: 5px !important;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+}
+
+/* === Horizontal pill handles === */
+.rc-slider-handle {
+    background-color: #ff8c00 !important;
+    border: none !important;
+    width: 22px !important;
+    height: 10px !important;
+    border-radius: 20px !important;
+    top: 5px !important;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.rc-slider-handle:hover {
+    background-color: #e07b00 !important;
+    transform: scale(1.15);
+}
+
+/* Tooltip */
+.rc-slider-tooltip {
+    font-size: 12px !important;
+}
+
+/* === Responsive tweaks === */
+@media (max-width: 768px) {
+    .rc-slider-handle {
+        width: 18px !important;
+        height: 8px !important;
+    }
+    h2 {
+        font-size: 1.3rem !important;
+    }
+    .dash-dropdown {
+        font-size: 14px !important;
+    }
+}
