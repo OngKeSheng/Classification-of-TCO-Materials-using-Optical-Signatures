@@ -1,0 +1,8 @@
+dash
+dash-bootstrap-components
+pandas
+numpy
+scikit-learn==1.5.2
+xgboost
+joblib
+gunicorn
