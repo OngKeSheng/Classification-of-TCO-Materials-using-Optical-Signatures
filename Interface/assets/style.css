@@ -1,0 +1,113 @@
+/* === General === */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* Avoid scrolling */
+    background-color: #007bff; /* Same blue as header color */
+}
+
+
+.header {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    border-bottom: 3px solid #0056b3;
+}
+
+.footer {
+    background-color: #f8f9fa;
+    text-align: center;
+    padding: 0px;
+    margin-top: 20px;
+    border-top: 1px solid #e9ecef;
+}
+
+.home-title {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* === RangeSlider Styling === */
+.rc-slider-rail {
+    background-color: #dcdcdc !important;
+    height: 5px !important;
+    border-radius: 5px !important;
+    width: 100%;
+}
+
+.rc-slider-handle {
+    background-color: #ff8c00 !important;
+    border: none !important;
+    width: 22px !important;
+    height: 10px !important;
+    border-radius: 20px;
+    top: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.rc-slider-handle:hover {
+    background-color: #e07b00 !important;
+    transform: scale(1.15);
+}
+
+.rc-slider-track {
+    background-color: #ff8c00 !important;
+    height: 5px !important;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    height: 92vh; /* Ensure it takes up the full height */
+    width: 100vw; /* Ensure it occupies full width */
+    box-sizing: border-box; /* Include paddings and borders in dimensions */
+}
+
+* Styles for Exit button */
+.exit-btn {
+    position: absolute;
+    right: 20px; /* Moves the Exit button to the far right */
+    top: 50%; /* Aligns vertically in the middle */
+    transform: translateY(-50%);
+    text-decoration: none;
+    cursor: pointer; /* Make it clickable */
+}
+
+/* SVG icon styles */
+.exit-icon {
+    width: 24px; /* SVG Width */
+    height: 24px; /* SVG Height */
+    vertical-align: middle;
+    transition: transform 0.2s, opacity 0.2s;
+}
+
+/* Add hover and click effects */
+.exit-btn:hover .exit-icon {
+    transform: scale(1.2); /* Grows slightly on hover */
+    opacity: 0.8; /* Adds transparency on hover */
+}
+
+/* === Responsive Design === */
+@media (max-width: 768px) {
+    .rc-slider-handle {
+        width: 18px !important;
+        height: 8px !important;
+    }
+
+    h2 {
+        font-size: 1.3rem !important;
+    }
+
+    .dash-dropdown {
+        font-size: 14px !important;
+    }
+}
